@@ -31,7 +31,10 @@
   },
   "scripts": {
     "post-create-project-cmd": [
-      "@php scripts/post-create-project.php"
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+      "@php -r \"@unlink('CHANGELOG.md');\"",
+      "@php -r \"@unlink('LICENSE.md');\"",
+      "@php -r \"@unlink('README.md');\""
     ]
   },
   "extra": {
