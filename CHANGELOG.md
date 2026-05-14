@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning follo
 
 ### What's new
 - Added the Imager X Cloudflare Images Transformer plugin (`spacecatninja/imager-x-cloudflare-images-transformer`), enabling Cloudflare Images as an Imager X transformer.
+- Added a Cloudflare R2 filesystem and a local `Transforms` filesystem, with the `images` volume now writing transforms to the latter. New `CLOUDFLARE_R2_*` env vars in `.env.example`.
 
 ## [0.3.0] - 2026-05-14
 

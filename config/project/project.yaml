@@ -1,4 +1,4 @@
-dateModified: 1778786417
+dateModified: 1778787471
 elementSources:
   craft\elements\Entry:
     -
@@ -110,6 +110,29 @@ fs:
       path: $FILESYSTEM_LOCAL_BASE_PATH
     type: craft\fs\Local
     url: $FILESYSTEM_LOCAL_BASE_URL
+  r2:
+    hasUrls: true
+    name: 'Cloudflare R2'
+    settings:
+      accountId: $CLOUDFLARE_R2_ACCOUNT_ID
+      addSubfolderToRootUrl: true
+      bucket: $CLOUDFLARE_R2_BUCKET
+      bucketSelectionMode: manual
+      expires: ''
+      keyId: $CLOUDFLARE_R2_ACCESS_KEY_ID
+      makeUploadsPublic: false
+      secret: $CLOUDFLARE_R2_SECRET_ACCESS_KEY
+      storageClass: ''
+      subfolder: ''
+    type: jrrdnx\cloudflarer2\Fs
+    url: $CLOUDFLARE_R2_BASE_URL
+  transforms:
+    hasUrls: true
+    name: Transforms
+    settings:
+      path: '@webroot/image-transforms'
+    type: craft\fs\Local
+    url: '@web/image-transforms'
 meta:
   __names__:
     1b189c03-518e-4d27-a5cc-3b8e861ca27b: 'Text - Multiline' # Text - Multiline
