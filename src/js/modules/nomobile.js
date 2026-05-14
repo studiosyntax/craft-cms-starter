@@ -1,4 +1,4 @@
-import { App } from "../app";
+import { isMobile } from "../utils/media";
 
 /**
  * NoMobile Module
@@ -13,7 +13,7 @@ import { App } from "../app";
  */
 export class NoMobile {
   constructor(element) {
-    if (App.isMobile) {
+    if (isMobile()) {
       element.querySelectorAll("[data-module]").forEach((el) => {
         el.removeAttribute("data-module");
       });
