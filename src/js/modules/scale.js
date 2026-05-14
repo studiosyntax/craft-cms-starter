@@ -32,9 +32,5 @@ export class Scale extends Track {
     const scale = this.startScale + (this.endScale - this.startScale) * value;
     gsap.set(this.target, { scale });
   };
-
-  transitionOut = () => {
-    this.destroy();
-  };
 }
 

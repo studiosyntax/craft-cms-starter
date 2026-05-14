@@ -45,9 +45,5 @@ export class Par extends Observe {
       autoAlpha: 0,
     });
   };
-
-  transitionOut() {
-    this.destroy();
-  }
 }
 

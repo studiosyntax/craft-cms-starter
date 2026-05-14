@@ -23,9 +23,5 @@ export class Parallax extends Track {
       item.style.transform = `translateY(${value * 20}%) scale(${scale})`;
     });
   };
-
-  transitionOut = () => {
-    this.destroy();
-  };
 }
 

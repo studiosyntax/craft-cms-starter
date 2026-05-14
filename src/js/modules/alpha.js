@@ -47,8 +47,4 @@ export class Alpha extends Observe {
     //   yPercent: 20,
     // });
   };
-
-  transitionOut() {
-    this.destroy();
-  }
 }
