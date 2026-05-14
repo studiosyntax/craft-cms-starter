@@ -1,5 +1,6 @@
 import { Observe } from "./_/observe";
 import gsap, { reduced, resetInitial } from "../gsap";
+import { computeParams } from "./_/index";
 
 /**
  * Fade Module
@@ -24,8 +25,7 @@ export class Fade extends Observe {
     super(element, { threshold: 0.1 });
 
     // Parse custom delay from data attribute
-    const delay = element.dataset.delay;
-    if (delay) this.a.delay = parseFloat(delay);
+    computeParams(element, this.a);
 
     this.#setInitialState();
     resetInitial(element);
@@ -60,9 +60,5 @@ export class Fade extends Observe {
     });
     */
   };
-
-  transitionOut() {
-    this.destroy();
-  }
 }
 
