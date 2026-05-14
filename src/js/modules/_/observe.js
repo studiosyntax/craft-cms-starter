@@ -94,6 +94,14 @@ class ObserverManager {
 // Singleton instance — ES modules are singletons by nature; no getInstance() needed
 export const observerManager = new ObserverManager();
 
+const DEFAULT_OBSERVE_CONFIG = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.1,
+  once: false,
+  callback: null,
+};
+
 /**
  * Observe — base class for viewport-triggered modules
  *
@@ -111,19 +119,10 @@ export class Observe extends BaseModule {
   inView = false;
   callback;
 
-  constructor(
-    element,
-    config = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.1,
-      once: false,
-      callback: null,
-    }
-  ) {
+  constructor(element, config = {}) {
     super(element);
-    this.#config = config;
-    this.callback = config.callback ?? null;
+    this.#config = { ...DEFAULT_OBSERVE_CONFIG, ...config };
+    this.callback = this.#config.callback ?? null;
   }
 
   /** Override in subclass — called when element enters viewport */
