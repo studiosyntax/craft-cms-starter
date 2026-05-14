@@ -4,12 +4,16 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning follo
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-05-14
+
+### What's new
+- Packaged the repo as a Composer project starter (`studiosyntax/craft-cms-starter`): `composer create-project` installs the full Craft stack, then a `post-create-project-cmd` hook seeds `.env` from `.env.example` and removes the starter's own meta-docs (`CHANGELOG.md`, `LICENSE.md`, `README.md`) from the generated project. Added a `README.md` describing the starter. 67dad33
+- Added a `Makefile` with install, setup, build, and DDEV helper targets — run `make help` to list them. 67dad33
+
 ### What's changed
-- Release workflow consolidated into the `/release` command: drafts the changelog, then commits, tags, pushes, and publishes the GitHub release behind one approval.
-- Upgraded the buildchain to Vite 8 (`@tailwindcss/vite` and `tailwindcss` bumped to 4.3 for Vite 8 support).
-- Packaged the repo as a Composer project (`studiosyntax/craft-cms-starter`): `composer create-project` installs the full stack, then `post-create-project-cmd` strips the starter's own metadata and docs from the generated project. Added a `README.md` describing the starter.
-- Added a `Makefile` with install, setup, build, and DDEV helper targets. Run `make help` to list them.
-- Added an MIT `LICENSE.md`.
+- Upgraded the front-end buildchain to Vite 8 (`@tailwindcss/vite` and `tailwindcss` bumped to 4.3). 0486979
+- Consolidated the release workflow into the `/release` command. 21e6e51
+- Added an MIT `LICENSE.md`. 67dad33
 
 ## [0.1.0] - 2026-05-14
 
