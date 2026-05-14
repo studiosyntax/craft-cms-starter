@@ -38,7 +38,7 @@ ddev craft make                      # Scaffold (craftcms/generator)
 
 ## Stack
 
-- **Front-end build**: Vite 7 + Tailwind CSS v4 (`@tailwindcss/vite`). Config in `vite.config.mjs`, styles in `src/css/site.css`.
+- **Front-end build**: Vite 8 + Tailwind CSS v4 (`@tailwindcss/vite`). Config in `vite.config.mjs`, styles in `src/css/site.css`.
 - **JS**: vanilla ES modules with a custom auto-discovered module system (`src/js/modules/`), GSAP, Lenis (smooth scroll), `@unseenco/taxi` (page transitions). See `.claude/rules/frontend-js.md`.
 - **Plugins**: CKEditor, nystudio107 Vite + Minify, Imager-X, Formie, Hyper (links), Expanded Singles, statikbe Config Values, Cloudflare R2.
 
