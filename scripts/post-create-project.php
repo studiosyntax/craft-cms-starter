@@ -3,16 +3,16 @@
 /**
  * Runs once, via the `post-create-project-cmd` Composer hook.
  *
- * Turns the starter into a clean project: strips the starter's own metadata
+ * Turns the starter into a clean project: drops the bootstrap `scripts` block
  * from composer.json, removes starter-only docs, then deletes itself.
  */
 
 $root = dirname(__DIR__);
 
-// Strip `name` and the bootstrap `scripts` block from composer.json.
+// Drop the bootstrap `scripts` block from composer.json.
 $file = $root . '/composer.json';
 $json = json_decode(file_get_contents($file), true);
-unset($json['name'], $json['scripts']);
+unset($json['scripts']);
 file_put_contents(
     $file,
     json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . PHP_EOL
