@@ -1,0 +1,32 @@
+{% extends "_layouts/layout-base.twig" %}
+
+{% block bodyHtml %}
+
+    <div class="transition-cover" data-transition-cover="">
+        <div class="transition-cover__inner"></div>
+    </div>
+
+    <div class="flex flex-col min-h-screen">
+        {{ include('_components/global/header.twig')  }}
+
+        <main class="flex-1 page-main" id="main" data-taxi>
+            <div class="" data-taxi-view>
+            {% block content %}{% endblock %}
+            </div>
+        </main>
+
+        {{ include('_components/global/footer.twig')  }}
+    </div>
+
+
+    {% block inline_scripts %}
+        <script>
+            window.app = window.app || {};
+            app.variables = {
+                assetsPath: "/"
+            };
+        </script>
+    {% endblock %}
+
+
+{% endblock %}

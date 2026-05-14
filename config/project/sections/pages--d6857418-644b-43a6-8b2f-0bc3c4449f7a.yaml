@@ -1,0 +1,24 @@
+defaultPlacement: beginning
+enableVersioning: true
+entryTypes:
+  -
+    uid: 085c0219-7f0a-4db2-ab33-a9799cf77957 # Contentbuilder Page
+handle: pages
+maxAuthors: 1
+name: Pages
+previewTargets:
+  -
+    label: 'Primaire invoer-pagina'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  82e0f805-c70f-4011-bb3e-c0c41c201027: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _views/pages/entry.twig
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: c3ef6023-27b9-4105-938d-7467fbe7ef88
+type: structure

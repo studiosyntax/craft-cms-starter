@@ -1,0 +1,35 @@
+
+# CRAFT ENVIRONMENT
+.env*
+!.env.example
+
+# COMPOSER
+/vendor
+
+# CRAFT STORAGE
+/storage/*
+!/storage/.gitkeep
+
+# ASSETS
+/web/cpresources/*
+!/web/cpresources/.gitkeep
+
+# FOLDERS
+/web/assets/*
+/web/cache/*
+/web/dist/*
+/web/media/*
+
+# BUILD FILES
+/node_modules/*
+/yarn-error.log
+/npm-debug.log
+
+# MISC FILES
+.cache
+.idea
+.DS_Store
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

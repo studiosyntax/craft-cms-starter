@@ -1,0 +1,58 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  863fdf44-e1f8-4c10-aeff-be973b9bffc4:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-13T20:00:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f74da79a-8274-49ce-b7aa-81bd4d5abe9e # Text
+            handle: label
+            instructions: 'The menu item label'
+            label: Label
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d2b6551-4f84-4059-b36e-9468a158744a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-13T20:01:32+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 58f4eb46-8064-47b3-bdd1-cc56dfb00540 # Nav links
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c15b5bd4-b249-48aa-a33f-92d419990f62
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f877dc7b-a122-4e46-9452-33f353e4bdbd
+        userCondition: null
+    thumbFieldKey: null
+handle: navMenu
+hasTitleField: false
+icon: link
+name: Menu
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

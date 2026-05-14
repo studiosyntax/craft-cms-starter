@@ -1,0 +1,64 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  2eed53d0-e480-41e8-b8ff-1b4ee3f1fb8f:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-13T20:02:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6c9b5259-e26f-43b1-b1d6-585fea9a824c # Navigation
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 24c36ec0-4174-4915-a92a-6c9346346b26
+            userCondition: null
+            warning: null
+            width: 100
+        name: Navigation
+        uid: 50b2530f-9ba3-40c7-af43-f9b2992f276a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-13T20:09:27+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 0549653a-f429-44a7-883f-c16fdc70326c # Social links
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5862067e-7318-404f-bc65-30cd5329882c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Socials
+        uid: edd36f5f-3f56-465b-b484-d065195ff554
+        userCondition: null
+    thumbFieldKey: null
+handle: siteSettings
+hasTitleField: false
+icon: gear
+name: 'Site settings'
+showSlugField: true
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

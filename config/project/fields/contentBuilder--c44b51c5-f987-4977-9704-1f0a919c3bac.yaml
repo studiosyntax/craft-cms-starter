@@ -1,0 +1,61 @@
+columnSuffix: null
+handle: contentBuilder
+instructions: null
+name: 'Content Builder'
+searchable: false
+settings:
+  createButtonLabel: 'Voeg blok toe'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 824a17ce-b920-4cb2-8c6c-25507f081713 # Rich Text
+        -
+          - group
+          - Content
+    -
+      __assoc__:
+        -
+          - uid
+          - d862b165-dde6-47f3-83a5-103d27b86c5b # Quote
+        -
+          - group
+          - Content
+    -
+      __assoc__:
+        -
+          - uid
+          - 1c895090-2ae3-48d4-8b62-5b457793bf33 # Image
+        -
+          - group
+          - Media
+    -
+      __assoc__:
+        -
+          - uid
+          - 5f98415b-edcc-46bc-82ce-1a6e1f165997 # Image Slider
+        -
+          - group
+          - Media
+    -
+      __assoc__:
+        -
+          - uid
+          - 3a69a2ed-0678-4142-a4fb-a92732b53c71 # Video
+        -
+          - group
+          - Media
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

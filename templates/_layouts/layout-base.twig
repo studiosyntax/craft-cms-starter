@@ -1,0 +1,66 @@
+{%- minify -%}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{# {% if 'studiosyntax.dev' in baseUrl  %}
+    <meta name="robots" content="none">
+{% endif %} #}
+
+{# CSS / JS #}
+{{ craft.vite.script('/src/index.js', false) }}
+
+
+{# reCAPTCHA v3 #}
+{% if getenv('RECAPTCHA_SITE_KEY') %}
+<script src="https://www.google.com/recaptcha/api.js?render={{ getenv('RECAPTCHA_SITE_KEY') }}" async defer></script>
+{% endif %}
+
+
+<style>
+[x-cloak] {display: none !important;}
+
+[data-start="hidden"] {
+    visibility: hidden;
+}
+[data-module="text"] {
+    overflow: hidden;
+
+    > span {
+        display: inline-block;
+    }
+}
+
+.transition-cover {
+    position: fixed;
+    inset: 0;
+    z-index: calc(infinity);
+    pointer-events: none;
+}
+.transition-cover__inner {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    transform-origin: bottom center;
+    clip-path: inset(100% 0 0 0);
+}
+{# -- Any CSS that should be included before </head> -- #}
+{% block headCss %}
+{% endblock headCss %}
+</style>
+
+</head>
+<body class="font-sans cursor-default bg-neutral {% block body_classes %}{% endblock %}">
+
+    {% if systemOffline is not defined %}
+        {% set systemOffline = false %}
+    {% endif %}
+
+    {% block bodyHtml %}
+    {% endblock bodyHtml %}
+
+</body>
+</html>
+{%- endminify -%}

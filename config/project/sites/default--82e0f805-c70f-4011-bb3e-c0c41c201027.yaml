@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: nl
+name: $CRAFT_SITE_NAME
+primary: true
+siteGroup: b3cb282d-153c-44e9-a974-1a5c79c19512 # Site
+sortOrder: 1

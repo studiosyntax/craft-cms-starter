@@ -1,0 +1,16 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: a7fa2baf-4c03-4981-affa-981329650c66 # Site settings
+handle: siteSettings
+maxAuthors: 1
+name: 'Site Settings'
+propagationMethod: all
+siteSettings:
+  82e0f805-c70f-4011-bb3e-c0c41c201027: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: site-settings
+type: single

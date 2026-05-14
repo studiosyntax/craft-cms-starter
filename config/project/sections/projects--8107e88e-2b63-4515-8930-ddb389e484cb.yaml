@@ -1,0 +1,24 @@
+defaultPlacement: beginning
+enableVersioning: true
+entryTypes:
+  -
+    uid: 85f0caad-b88e-4f75-bf0d-50110af0b4bf # Project
+handle: projects
+maxAuthors: 1
+name: Projects
+previewTargets:
+  -
+    label: 'Primaire invoer-pagina'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  82e0f805-c70f-4011-bb3e-c0c41c201027: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _views/projects/entry.twig
+    uriFormat: 'projecten/{slug}'
+structure:
+  maxLevels: 1
+  uid: 0820cd3d-ecf7-41c2-97dd-b62a6139105d
+type: structure

@@ -1,0 +1,8 @@
+<div class="">
+IMAGE
+
+{% set imageAsset = entry.image.eagerly().one() %}
+{% if imageAsset %}
+  {{ imageAsset.url }}
+{% endif %}
+</div>

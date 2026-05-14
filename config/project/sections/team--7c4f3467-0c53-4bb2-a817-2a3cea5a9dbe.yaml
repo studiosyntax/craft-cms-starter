@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 227d04cd-3364-42c3-8531-cd8facd72c18 # Team
+handle: team
+maxAuthors: 1
+name: Team
+previewTargets:
+  -
+    label: 'Primaire invoer-pagina'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  82e0f805-c70f-4011-bb3e-c0c41c201027: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 2d9c642c-dcb4-4f6d-a3ad-89e8033cc780
+type: structure

@@ -1,0 +1,11 @@
+columnSuffix: null
+handle: ctaLinkStyle
+instructions: null
+name: 'Link style'
+searchable: false
+settings:
+  dataSet: 'CTA styles'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

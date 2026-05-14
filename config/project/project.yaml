@@ -1,0 +1,218 @@
+dateModified: 1778739234
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      page: Entries
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      heading: General
+      key: 'heading:8e858ead-546e-43d2-97cc-b500dbf2fab7'
+      page: Entries
+      type: heading
+    -
+      key: 'single:6eba6a39-59a5-41ac-9dcd-41c56ccaf5bb' # Homepage
+      page: Entries
+      type: native
+    -
+      key: 'single:8bc05e88-29f1-4737-acdc-9b36aa0187bd' # Contact
+      page: Entries
+      type: native
+    -
+      key: 'single:05c904b0-6b82-486f-9c0a-e02aa4063b48' # Site Settings
+      page: Entries
+      type: native
+    -
+      heading: Content
+      key: 'heading:35c319c5-e9fa-4d8e-8709-00a6cdfe79b2'
+      page: Entries
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:d6857418-644b-43a6-8b2f-0bc3c4449f7a' # Pages
+      page: Entries
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      key: 'section:8107e88e-2b63-4515-8930-ddb389e484cb' # Projects
+      page: Entries
+      type: native
+    -
+      key: 'section:9d88690f-ee0a-4072-8a00-58dea7e77107' # Blog
+      page: Entries
+      type: native
+    -
+      heading: Overige
+      key: 'heading:02324cb7-a651-4776-94ed-0b3822c80315'
+      page: Entries
+      type: heading
+    -
+      key: 'section:7c4f3467-0c53-4bb2-a817-2a3cea5a9dbe' # Team
+      page: Entries
+      type: native
+    -
+      key: 'section:5eb15d54-1933-41c4-abab-9488115d7fc9'
+      page: Entries
+      type: native
+    -
+      heading: Taxonomies
+      key: 'heading:95d923f3-fdb2-4e69-a014-8cf9fc3bb748'
+      page: Entries
+      type: heading
+    -
+      key: 'section:cebe4ee1-38d5-43b9-8caa-09b0d27cda70' # Blog categories
+      page: Entries
+      type: native
+    -
+      heading: ''
+      key: 'heading:471a0697-885b-4a94-997e-b4ec7a93af12'
+      page: Entries
+      type: heading
+    -
+      heading: ''
+      key: 'heading:f09bc4f7-3284-471c-a29a-ec405a425a79'
+      page: Entries
+      type: heading
+email:
+  fromEmail: $CRAFT_SYSTEM_EMAIL
+  fromName: $CRAFT_SITE_NAME
+  replyToEmail: $CRAFT_SYSTEM_EMAIL
+  template: _emails/system.twig
+  transportSettings:
+    command: '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  local:
+    hasUrls: true
+    name: Local
+    settings:
+      path: $FILESYSTEM_LOCAL_BASE_PATH
+    type: craft\fs\Local
+    url: $FILESYSTEM_LOCAL_BASE_URL
+meta:
+  __names__:
+    1b189c03-518e-4d27-a5cc-3b8e861ca27b: 'Text - Multiline' # Text - Multiline
+    1c895090-2ae3-48d4-8b62-5b457793bf33: Image # Image
+    2ccf32fc-a5e9-438d-a57d-6a8cd0bbea74: 'Nav link' # Nav link
+    2e46bc01-a82b-4388-be8d-c543e54991a6: Images # Images
+    2e5459b8-c0da-44a7-a377-2f5d5d3ac5df: 'Call to actions' # Call to actions
+    3a69a2ed-0678-4142-a4fb-a92732b53c71: Video # Video
+    3f7103c2-2a66-438c-a7f7-dc3f9d6da1df: Homepage # Homepage
+    3ff9e664-e7ee-4d63-8e81-22764bf022e6: 'Contact page' # Contact page
+    05c904b0-6b82-486f-9c0a-e02aa4063b48: 'Site Settings' # Site Settings
+    5e03d238-ce6d-45a5-8591-3acbad3a8205: Link # Link
+    5f98415b-edcc-46bc-82ce-1a6e1f165997: 'Image Slider' # Image Slider
+    6c9b5259-e26f-43b1-b1d6-585fea9a824c: Navigation # Navigation
+    6eba6a39-59a5-41ac-9dcd-41c56ccaf5bb: Homepage # Homepage
+    7c4f3467-0c53-4bb2-a817-2a3cea5a9dbe: Team # Team
+    07d5b138-2a5f-4e1d-94fb-ea4451ce830a: Image # Image
+    8bc05e88-29f1-4737-acdc-9b36aa0187bd: Contact # Contact
+    9d88690f-ee0a-4072-8a00-58dea7e77107: Blog # Blog
+    9f918f6d-5fa3-4e75-9fcc-b100492d96e0: Menu # Menu
+    040c9185-2618-4075-8acd-b72be9774713: Categorie # Categorie
+    56cb2362-c8c0-4f71-ae7e-35176f9bda2b: New # New
+    58f4eb46-8064-47b3-bdd1-cc56dfb00540: 'Nav links' # Nav links
+    82e0f805-c70f-4011-bb3e-c0c41c201027: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    085c0219-7f0a-4db2-ab33-a9799cf77957: 'Contentbuilder Page' # Contentbuilder Page
+    85f0caad-b88e-4f75-bf0d-50110af0b4bf: Project # Project
+    093d8499-8531-4425-9d24-c088f60c5740: 'URL field' # URL field
+    96b063e4-7ac7-415c-9e03-1ee64231123e: Contactformulier # Contactformulier
+    227d04cd-3364-42c3-8531-cd8facd72c18: Team # Team
+    803f8b85-65de-4071-ad82-f2dd1ce6591b: 'Rich Text - Article' # Rich Text - Article
+    824a17ce-b920-4cb2-8c6c-25507f081713: 'Rich Text' # Rich Text
+    4229d1ca-18b7-4a56-a144-1cbe32afddd2: Form # Form
+    5186ef38-74a4-47fa-bb7b-487d0cc7ea36: Afbeeldingen # Afbeeldingen
+    8107e88e-2b63-4515-8930-ddb389e484cb: Projects # Projects
+    0549653a-f429-44a7-883f-c16fdc70326c: 'Social links' # Social links
+    a7fa2baf-4c03-4981-affa-981329650c66: 'Site settings' # Site settings
+    abce2c12-a963-40e2-81a0-6d028d32744e: Artikel # Artikel
+    b3cb282d-153c-44e9-a974-1a5c79c19512: Site # Site
+    bf6802d3-348f-4fab-9ecb-60d42c0d19c4: 'Link style' # Link style
+    c7f8a940-f9bd-49be-b008-4941e4372bc0: 'Rich Text - Simple' # Rich Text - Simple
+    c44b51c5-f987-4977-9704-1f0a919c3bac: 'Content Builder' # Content Builder
+    cca634b6-b1bc-4942-942f-e54be8754a93: 'Background color' # Background color
+    ce2071b1-2a87-4661-b65e-36f5aa0828d6: 'Call to action' # Call to action
+    cebe4ee1-38d5-43b9-8caa-09b0d27cda70: 'Blog categories' # Blog categories
+    d862b165-dde6-47f3-83a5-103d27b86c5b: Quote # Quote
+    d3464f35-474f-477e-b0f5-90104d7bdfcf: Category # Category
+    d6857418-644b-43a6-8b2f-0bc3c4449f7a: Pages # Pages
+    da71e12e-e11c-4b7d-a57a-cc26b221d236: Bestanden # Bestanden
+    f74da79a-8274-49ce-b7aa-81bd4d5abe9e: Text # Text
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.0.0.1
+  cloudflare-r2:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.0'
+  config-values-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      expandSingles: true
+      redirectToEntry: true
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: 8IPQ1L9H4LGN27AUHQMQRM9P
+    schemaVersion: 3.4.12
+  hyper:
+    edition: standard
+    enabled: true
+    licenseKey: JCBKTVS6A9KD2H00Q2469KDD
+    schemaVersion: 1.0.0
+  imager-x:
+    edition: lite
+    enabled: true
+    licenseKey: 542SKDHJZRPLV0FW8ZMUNXS5
+    schemaVersion: 4.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $CRAFT_SITE_NAME
+  retryDuration: null
+  schemaVersion: 5.9.0.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 3ff9e664-e7ee-4d63-8e81-22764bf022e6 # Contact page
+handle: contact
+maxAuthors: 1
+name: Contact
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  82e0f805-c70f-4011-bb3e-c0c41c201027: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _views/contact/entry.twig
+    uriFormat: '{slug}'
+type: single

@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: abce2c12-a963-40e2-81a0-6d028d32744e # Artikel
+handle: blog
+maxAuthors: 1
+name: Blog
+previewTargets:
+  -
+    label: 'Primaire invoer-pagina'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  82e0f805-c70f-4011-bb3e-c0c41c201027: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _views/article/entry.twig
+    uriFormat: 'blog/{slug}'
+type: channel

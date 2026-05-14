@@ -1,0 +1,163 @@
+columnSuffix: null
+handle: socialLinks
+instructions: null
+name: 'Social links'
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - 3898f687-acd2-4333-ba0b-558203e79ce3
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - bb142b64-ab5b-4fe9-8484-77e5c66e5fa4
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - facebook
+                            2:
+                              - label
+                              - Facebook
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-13T20:08:15+00:00'
+                            9:
+                              - uid
+                              - 987f0c16-73fe-46db-9097-a6a6a5abf4c1
+                            12:
+                              - fieldUid
+                              - 093d8499-8531-4425-9d24-c088f60c5740 # URL field
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - twitter
+                            2:
+                              - label
+                              - 'X (Twitter)'
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-13T20:08:15+00:00'
+                            9:
+                              - uid
+                              - 9bdd11d2-303d-4596-ae27-7c3075fba225
+                            12:
+                              - fieldUid
+                              - 093d8499-8531-4425-9d24-c088f60c5740 # URL field
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - linkedin
+                            2:
+                              - label
+                              - LinkedIn
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-13T20:08:15+00:00'
+                            9:
+                              - uid
+                              - 74e60563-cb1a-484c-bdf5-7fdb138f07de
+                            12:
+                              - fieldUid
+                              - 093d8499-8531-4425-9d24-c088f60c5740 # URL field
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - instagram
+                            2:
+                              - label
+                              - Instagram
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-13T20:08:15+00:00'
+                            9:
+                              - uid
+                              - 685605e8-073b-4dc2-8bbd-a9e77bc55d59
+                            12:
+                              - fieldUid
+                              - 093d8499-8531-4425-9d24-c088f60c5740 # URL field
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - youtube
+                            2:
+                              - label
+                              - Youtube
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-13T20:08:15+00:00'
+                            9:
+                              - uid
+                              - e1240ccc-b2bf-4251-9c7f-a1f9fa253019
+                            12:
+                              - fieldUid
+                              - 093d8499-8531-4425-9d24-c088f60c5740 # URL field
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock
