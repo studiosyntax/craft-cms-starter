@@ -1,7 +1,7 @@
 import gsap, { Flip, ScrollTrigger, SplitText } from "../gsap";
 import { reduced, resetInitial } from "../gsap";
 import { isTabletOrBelow } from "../utils/media";
-import { observerManager } from "./_/observe";
+import { Observe } from "./_/observe";
 import { Resize } from "../utils/subscribable";
 
 /**
@@ -12,9 +12,7 @@ import { Resize } from "../utils/subscribable";
  * own element's viewport entry — causing unpredictable order since each element
  * can enter at different times.
  */
-export class HeroHome {
-    element; // required by Dom.getModule()
-    #element;
+export class HeroHome extends Observe {
     #box;
     #markerStart;
     #markerFinal;
@@ -28,18 +26,17 @@ export class HeroHome {
     #resizeSub;
 
     constructor(element) {
-        this.element = element;
-        this.#element = element;
+        super(element, { threshold: 0.1, once: true });
         this.create();
     }
 
     create() {
-        this.#box = this.#element.querySelector("[data-flip-box]");
-        this.#markerStart = this.#element.querySelector("[data-flip-marker-start]");
-        this.#markerFinal = this.#element.querySelector("[data-flip-marker-final]");
-        this.#titleEl = this.#element.querySelector("[data-hero-title]") || this.#element.querySelector("h1");
-        this.#subtitleEl = this.#element.querySelector("[data-hero-subtitle]") || this.#element.querySelector("h2");
-        this.#imageEl = this.#element.querySelector("[data-hero-image]") || this.#element.querySelector("[data-flip-box] > div");
+        this.#box = this.element.querySelector("[data-flip-box]");
+        this.#markerStart = this.element.querySelector("[data-flip-marker-start]");
+        this.#markerFinal = this.element.querySelector("[data-flip-marker-final]");
+        this.#titleEl = this.element.querySelector("[data-hero-title]") || this.element.querySelector("h1");
+        this.#subtitleEl = this.element.querySelector("[data-hero-subtitle]") || this.element.querySelector("h2");
+        this.#imageEl = this.element.querySelector("[data-hero-image]") || this.element.querySelector("[data-flip-box] > div");
 
         if (!this.#box || !this.#markerStart || !this.#markerFinal) {
             console.warn("HeroHome: Missing data-flip-box, data-flip-marker-start, or data-flip-marker-final");
@@ -82,24 +79,8 @@ export class HeroHome {
         }
     };
 
-    start() {
-        this.#observeHero();
-    }
-
-    stop() {
-        observerManager.removeElement(this.#element);
-    }
-
-    #observeHero = () => {
-        observerManager.addElement(
-            this.#element,
-            { root: null, rootMargin: "0px", threshold: 0.1, once: true },
-            {
-                isIn: () => {
-                    if (!this.#introRun) this.#runIntroSequence();
-                },
-            }
-        );
+    isIn = () => {
+        if (!this.#introRun) this.#runIntroSequence();
     };
 
     #runIntroSequence = () => {
@@ -194,15 +175,11 @@ export class HeroHome {
         this.#createTimeline();
     };
 
-    transitionOut = () => {
-        this.destroy();
-    };
-
     destroy() {
         this.#resizeSub?.();
-        this.stop();
         this.#titleSplit?.revert();
         this.#subtitleSplit?.revert();
         this.#ctx?.revert();
+        super.destroy();
     }
 }
