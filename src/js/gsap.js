@@ -22,16 +22,10 @@ gsap.defaults(defaults);
 const reduced = prefersReducedMotion();
 
 const resetInitial = (element) => {
-  const el = element.querySelectorAll("[data-start='hidden']");
-  if (el && el.length > 0) {
-    gsap.set(el, {
-      visibility: "visible",
-    });
-  } else {
-    gsap.set(element, {
-      visibility: "visible",
-    });
-  }
+  const hidden = element.querySelectorAll("[data-start='hidden']");
+  gsap.set(hidden.length ? hidden : element, {
+    visibility: "visible",
+  });
 };
 
 gsap.ticker.lagSmoothing(0);
