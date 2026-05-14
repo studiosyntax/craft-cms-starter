@@ -4,6 +4,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning follo
 
 ## [Unreleased]
 
+### What's changed
+- `make install` now renames the DDEV project from the starter default (`craftcms`) to the project directory name, before starting it — avoiding name collisions in a freshly created project. Override with `make install PROJECT_NAME=foo`, or set it anytime with `make rename PROJECT_NAME=foo`.
+
 ## [0.2.0] - 2026-05-14
 
 ### What's new
