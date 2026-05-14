@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b036edc847f8a45ec81ce65cef3fa5dd",
+    "content-hash": "7d29abafac07d4e9d454bca2ea765cd8",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -7342,6 +7342,71 @@
                 "source": "https://github.com/spacecatninja/craft-imager-x/tree/5.2.1"
             },
             "time": "2026-03-03T09:51:45+00:00"
+        },
+        {
+            "name": "spacecatninja/imager-x-cloudflare-images-transformer",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spacecatninja/craft-imager-x-cloudflare-images-transformer.git",
+                "reference": "48681503a94f20377c51e4c6c99a45e6614acae1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x-cloudflare-images-transformer/zipball/48681503a94f20377c51e4c6c99a45e6614acae1",
+                "reference": "48681503a94f20377c51e4c6c99a45e6614acae1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Imager X Cloudflare Images Transformer",
+                "class": "spacecatninja\\cloudflareimagestransformer\\CloudflareImagesTransformer",
+                "handle": "imager-x-cloudflare-images-transformer",
+                "components": [],
+                "changelogUrl": "https://raw.githubusercontent.com/spacecatninja/craft-imager-x-cloudflare-images-transformer/master/CHANGELOG.md",
+                "hasCpSection": false,
+                "hasCpSettings": false,
+                "schemaVersion": "1.0.0"
+            },
+            "autoload": {
+                "psr-4": {
+                    "spacecatninja\\cloudflareimagestransformer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SPACECATNINJA",
+                    "homepage": "https://www.spacecat.ninja"
+                }
+            ],
+            "description": "Cloudflare Images transformer for Imager X",
+            "keywords": [
+                "Craft",
+                "cloudflare",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "image",
+                "images",
+                "picture",
+                "responsive",
+                "srcset",
+                "transform"
+            ],
+            "support": {
+                "docs": "https://github.com/spacecatninja/craft-imager-x-cloudflare-images-transformer/blob/master/README.md",
+                "issues": "https://github.com/spacecatninja/craft-imager-x-cloudflare-images-transformer/issues",
+                "source": "https://github.com/spacecatninja/craft-imager-x-cloudflare-images-transformer/tree/1.0.1"
+            },
+            "time": "2026-03-07T18:20:24+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",

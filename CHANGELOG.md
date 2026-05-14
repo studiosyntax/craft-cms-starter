@@ -4,6 +4,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning follo
 
 ## [Unreleased]
 
+### What's new
+- Added the Imager X Cloudflare Images Transformer plugin (`spacecatninja/imager-x-cloudflare-images-transformer`), enabling Cloudflare Images as an Imager X transformer.
+
 ## [0.3.0] - 2026-05-14
 
 ### What's new

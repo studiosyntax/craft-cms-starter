@@ -11,6 +11,7 @@
     "nystudio107/craft-minify": "^5.0",
     "nystudio107/craft-vite": "^5.0",
     "spacecatninja/imager-x": "^5.2",
+    "spacecatninja/imager-x-cloudflare-images-transformer": "^1.0",
     "statikbe/craft-config-values": "^5.3.0",
     "verbb/expanded-singles": "^3.0",
     "verbb/formie": "^3.1",

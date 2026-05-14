@@ -1,4 +1,4 @@
-dateModified: 1778739234
+dateModified: 1778786417
 elementSources:
   craft\elements\Entry:
     -
@@ -194,6 +194,10 @@ plugins:
     enabled: true
     licenseKey: 542SKDHJZRPLV0FW8ZMUNXS5
     schemaVersion: 4.0.0
+  imager-x-cloudflare-images-transformer:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   minify:
     edition: standard
     enabled: true
