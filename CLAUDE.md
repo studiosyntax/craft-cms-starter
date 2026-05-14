@@ -41,7 +41,6 @@ ddev craft make                      # Scaffold (craftcms/generator)
 - **Front-end build**: Vite 7 + Tailwind CSS v4 (`@tailwindcss/vite`). Config in `vite.config.mjs`, styles in `src/css/site.css`.
 - **JS**: vanilla ES modules with a custom auto-discovered module system (`src/js/modules/`), GSAP, Lenis (smooth scroll), `@unseenco/taxi` (page transitions). See `.claude/rules/frontend-js.md`.
 - **Plugins**: CKEditor, nystudio107 Vite + Minify, Imager-X, Formie, Hyper (links), Expanded Singles, statikbe Config Values, Cloudflare R2.
-- No SEOmatic / empty-coalesce → the `???` operator is **not** available; use `??`.
 
 ## Template Structure
 
@@ -66,9 +65,20 @@ content model here once it stabilises.
 without permission prompts. It is gitignored — adjust locally as needed. If
 commands are being blocked, check this file first.
 
-## Paths
+## Changelog & releases
 
-- **Dev root**: `/Users/sjoerd/dev/sites/` — parent folder for all projects. The planner clones public repos into `/Users/sjoerd/dev/sites/research/` for research/audits.
+Manually-curated `CHANGELOG.md` using Conventional Commits + Keep a Changelog format.
+
+**When making user-visible changes**, add a bullet to `## [Unreleased]` in the same commit.
+
+User-visible: new plugin, Twig structure change, new convention, `.env.example` update, config change affecting setup.
+Not user-visible: internal renames, comments, tests, dev-only tooling.
+
+**Commit format**: `feat:`, `fix:`, `refactor:`, `chore:`, `perf:`, `docs:`, `test:`. Add `!` or `BREAKING CHANGE:` for breaking.
+
+**To release**: run `/release-notes`, review, then follow the commands it outputs. Create a GitHub Release with the new CHANGELOG section as the body.
+
+**Versioning**: SemVer. During 0.x, breaking changes bump MINOR.
 
 ## Documentation
 
