@@ -20,10 +20,3 @@ export const clientRect = (element) => {
   };
 };
 
-export const clientRectGl = (element, ratio = 1) => {
-  const bounds = clientRect(element);
-  for (const [key, value] of Object.entries(bounds))
-    bounds[key] = value * ratio;
-  return bounds;
-};
-

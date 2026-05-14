@@ -2,6 +2,7 @@ import { Core } from "@unseenco/taxi";
 import { CoverTransition } from "./transitions/cover";
 import { LoopTransition } from "./transitions/loop";
 import { FadeTransition } from "./transitions/fade";
+import { log } from "./utils/log";
 import hey from "./hey";
 
 /**
@@ -32,6 +33,6 @@ export class Pages extends Core {
 
     hey.PAGE_SLUG = window.location.pathname;
 
-    console.log("🚕 Taxi ready");
+    log("🚕 Taxi ready");
   }
 }

@@ -20,7 +20,3 @@ export const isTabletOrBelow = () =>
  */
 export const isMobile = () =>
   window.matchMedia("(max-width: 768px)").matches;
-
-/** Returns true if viewport is on a large/4K screen (≥ 2190px) */
-export const isLargeScreen = () =>
-  window.matchMedia("(min-width: 2190px)").matches;

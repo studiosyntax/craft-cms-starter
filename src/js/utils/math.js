@@ -39,23 +39,3 @@ export function clamp(min, max, num) {
   return Math.min(Math.max(num, min), max);
 }
 
-/** ------------ Angles **/
-export function radToDeg(r) {
-  return (r * 180) / Math.PI;
-}
-
-export function degToRad(d) {
-  return (d * Math.PI) / 180;
-}
-
-/** ------------ Bitwise **/
-export const isPowerOfTwo = (n) => !!n && (n & (n - 1)) === 0;
-
-export function symmetricMod(value, base) {
-  let m = value % base;
-  if (Math.abs(m) > base / 2) {
-    m = m > 0 ? m - base : m + base;
-  }
-  return m;
-}
-

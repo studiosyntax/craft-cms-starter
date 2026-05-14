@@ -1,6 +1,7 @@
 import { createModules } from "./modules/_/index";
 import { NoMobile } from "./modules/nomobile";
 import { ScrollTrigger } from "./gsap";
+import { log } from "./utils/log";
 import hey from "./hey";
 
 /**
@@ -23,10 +24,6 @@ import hey from "./hey";
 export class _Dom {
   #items = [];
 
-  // Maps data-module name → instance for fast lookup without relying on class
-  // names (which are mangled by minifiers in production).
-  #nameMap = new Map();
-
   #created = false;
   #started = false;
 
@@ -40,17 +37,6 @@ export class _Dom {
 
   get started() {
     return this.#started;
-  }
-
-  /**
-   * Find a module instance by its data-module name.
-   * Safe under minification — keyed on the HTML attribute string, not class name.
-   *
-   * @param {string} name - The data-module value (e.g. "herohome")
-   * @returns {import('./modules/_/base').BaseModule|undefined}
-   */
-  getModule(name) {
-    return this.#nameMap.get(name);
   }
 
   // ─── Lifecycle ─────────────────────────────────────────────────────────────
@@ -69,15 +55,7 @@ export class _Dom {
 
     this.#items = createModules();
 
-    // Build the name map from the live DOM — avoids relying on minified class names.
-    this.#nameMap.clear();
-    document.querySelectorAll("[data-module]").forEach((el) => {
-      const name = el.dataset.module;
-      const instance = this.#items.find((item) => item.element === el);
-      if (instance) this.#nameMap.set(name, instance);
-    });
-
-    console.log(`📦 Created ${this.#items.length} modules`);
+    log(`📦 Created ${this.#items.length} modules`);
   }
 
   /**
@@ -92,7 +70,7 @@ export class _Dom {
     this.#items.forEach((item) => item.start?.());
 
     hey.DOM_READY = true;
-    console.log(`▶️ Started ${this.#items.length} modules`);
+    log(`▶️ Started ${this.#items.length} modules`);
   }
 
   stop() {
@@ -102,7 +80,6 @@ export class _Dom {
   destroy() {
     this.#items.forEach((item) => item.destroy?.());
     this.#items = [];
-    this.#nameMap.clear();
     this.#created = false;
     this.#started = false;
 

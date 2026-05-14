@@ -4,7 +4,8 @@ import { Preloader } from "./persistent/preloader";
 import { Navigation } from "./persistent/navigation";
 import { Header } from "./persistent/header";
 import { CopyEmail } from "./persistent/copy-email";
-import { isMobile, isLargeScreen } from "./utils/media";
+import { isMobile } from "./utils/media";
+import { log } from "./utils/log";
 import { Resize } from "./utils/subscribable";
 import { config as defaultConfig } from "./app.config";
 import hey from "./hey";
@@ -28,7 +29,6 @@ import hey from "./hey";
  */
 class _App {
   isMobile = isMobile();
-  isLargeScreen = isLargeScreen();
   #initialized = false;
   #config;
 
@@ -46,7 +46,7 @@ class _App {
     if (this.#initialized) return;
     this.#initialized = true;
 
-    console.log("🚀 App initializing...");
+    log("🚀 App initializing...");
 
     // Persistent modules that survive page transitions
     new Navigation();
@@ -86,12 +86,11 @@ class _App {
     }
 
     hey.APP_READY = true;
-    console.log("✨ App ready");
+    log("✨ App ready");
 
     // Keep mobile/screen flags current on resize
     Resize.subscribe(() => {
       this.isMobile = isMobile();
-      this.isLargeScreen = isLargeScreen();
     });
   }
 }
