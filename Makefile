@@ -2,7 +2,7 @@
 # Run `make` or `make help` to list available targets.
 
 .DEFAULT_GOAL := help
-.PHONY: help install setup start dev prod stop restart \
+.PHONY: help install setup rename start dev prod stop restart \
         composer-install npm-install update up keys \
         clean clean-logs import-db share launch mailpit
 
@@ -10,11 +10,19 @@
 # warns on Vite 8. --legacy-peer-deps keeps installs quiet and deterministic.
 NPM_INSTALL_FLAGS ?= --legacy-peer-deps
 
+# DDEV project name. Defaults to the project directory name — override with
+# `make install PROJECT_NAME=foo`. DDEV expects lowercase alphanumerics + hyphens.
+PROJECT_NAME ?= $(notdir $(CURDIR))
+
 help: ## List available targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 		| awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}'
 
 install: ## First-time setup of a freshly created project
+	@if grep -q '^name: craftcms$$' .ddev/config.yaml; then \
+		ddev config --project-name="$(PROJECT_NAME)" \
+		&& echo "DDEV project renamed to \"$(PROJECT_NAME)\""; \
+	fi
 	ddev start
 	@if [ ! -f .env ]; then cp .env.example .env && echo ".env created from .env.example"; fi
 	ddev composer install
@@ -24,6 +32,10 @@ install: ## First-time setup of a freshly created project
 	ddev craft up
 	ddev launch
 	@echo "Install complete."
+
+rename: ## Set the DDEV project name — make rename PROJECT_NAME=foo
+	ddev config --project-name="$(PROJECT_NAME)"
+	ddev restart
 
 setup: ## Onboard an existing checkout (deps + migrations + dev server)
 	ddev start
