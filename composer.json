@@ -1,5 +1,6 @@
 {
-  "name": "studiosyntax/craft-cms",
+  "name": "studiosyntax/craft-cms-starter",
+  "type": "project",
   "license": "MIT",
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -29,8 +30,11 @@
     "optimize-autoloader": true
   },
   "scripts": {
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
+    "post-create-project-cmd": [
+      "@php -r \"$f='composer.json';$j=json_decode(file_get_contents($f),true);unset($j['name'],$j['scripts']);file_put_contents($f,json_encode($j,JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).PHP_EOL);\"",
+      "@php -r \"@unlink('CHANGELOG.md');\"",
+      "@php -r \"@unlink('LICENSE.md');\"",
+      "@php -r \"@unlink('README.md');\""
     ]
   },
   "extra": {

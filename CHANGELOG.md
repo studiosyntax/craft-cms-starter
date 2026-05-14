@@ -7,6 +7,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning follo
 ### What's changed
 - Release workflow consolidated into the `/release` command: drafts the changelog, then commits, tags, pushes, and publishes the GitHub release behind one approval.
 - Upgraded the buildchain to Vite 8 (`@tailwindcss/vite` and `tailwindcss` bumped to 4.3 for Vite 8 support).
+- Packaged the repo as a Composer project (`studiosyntax/craft-cms-starter`): `composer create-project` installs the full stack, then `post-create-project-cmd` strips the starter's own metadata and docs from the generated project. Added a `README.md` describing the starter.
 
 ## [0.1.0] - 2026-05-14
 
