@@ -76,7 +76,7 @@ Not user-visible: internal renames, comments, tests, dev-only tooling.
 
 **Commit format**: `feat:`, `fix:`, `refactor:`, `chore:`, `perf:`, `docs:`, `test:`. Add `!` or `BREAKING CHANGE:` for breaking.
 
-**To release**: run `/release-notes`, review, then follow the commands it outputs. Create a GitHub Release with the new CHANGELOG section as the body.
+**To release**: run `/release`. It drafts the new `CHANGELOG.md` section for review, then — after one approval — commits, tags, pushes, and creates the GitHub Release with that section as the body.
 
 **Versioning**: SemVer. During 0.x, breaking changes bump MINOR.
 

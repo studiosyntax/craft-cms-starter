@@ -4,6 +4,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning follo
 
 ## [Unreleased]
 
+### What's changed
+- Release workflow consolidated into the `/release` command: drafts the changelog, then commits, tags, pushes, and publishes the GitHub release behind one approval.
+
 ## [0.1.0] - 2026-05-14
 
 ### What's new
