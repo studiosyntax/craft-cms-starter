@@ -32,5 +32,8 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
+  },
+  "extra": {
+    "craftcms-claude-skills": "1.3.0"
   }
 }
