@@ -1,6 +1,7 @@
 {%- minify -%}
+{% set currentLocale = craft.app.language|split('-')[0] %}
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="{{ currentLocale }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,6 @@
 
 {# CSS / JS #}
 {{ craft.vite.script('/src/index.js', false) }}
-
-
-{# reCAPTCHA v3 #}
-{% if getenv('RECAPTCHA_SITE_KEY') %}
-<script src="https://www.google.com/recaptcha/api.js?render={{ getenv('RECAPTCHA_SITE_KEY') }}" async defer></script>
-{% endif %}
-
 
 <style>
 [x-cloak] {display: none !important;}
@@ -32,7 +26,6 @@
         display: inline-block;
     }
 }
-
 .transition-cover {
     position: fixed;
     inset: 0;
@@ -53,10 +46,6 @@
 
 </head>
 <body class="font-sans cursor-default bg-neutral {% block body_classes %}{% endblock %}">
-
-    {% if systemOffline is not defined %}
-        {% set systemOffline = false %}
-    {% endif %}
 
     {% block bodyHtml %}
     {% endblock bodyHtml %}
