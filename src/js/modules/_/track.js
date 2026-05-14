@@ -35,15 +35,16 @@ export class Track extends Observe {
 
   constructor(element, config = {}) {
     super(element, {
-      autoStart: false,
       once: false,
       threshold: 0,
     });
 
-    this.element = element;
     this.config = { ...DEFAULT_CONFIG, ...config };
+  }
 
-    this.#resize();
+  start() {
+    super.start();
+
     this.#scrollSub = Scroll.subscribe(this.#handleScroll);
     this.#resizeSub = Resize.subscribe(this.#resize);
 
@@ -51,8 +52,9 @@ export class Track extends Observe {
     // the element's size settles (e.g. images loading, font rendering).
     // More reliable than a fixed timeout.
     this.#elementObserver = new ResizeObserver(this.#resize);
-    this.#elementObserver.observe(element);
+    this.#elementObserver.observe(this.element);
 
+    this.#resize();
     this.#handleScroll();
     this.#init = true;
   }
