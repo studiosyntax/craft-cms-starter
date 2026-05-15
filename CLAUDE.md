@@ -26,7 +26,7 @@ Use `gh` for all GitHub operations.
 
 ## Environment
 
-DDEV project `craftcms` — PHP 8.3, MySQL 8.0, nginx-fpm. Vite dev server is exposed on port 3000.
+DDEV project `craftcms` — PHP 8.4, MySQL 8.0, nginx-fpm. Vite dev server is exposed on port 3000.
 
 ```bash
 ddev npm run dev                     # Vite dev server (port 3000)

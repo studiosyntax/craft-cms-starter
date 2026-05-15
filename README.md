@@ -11,7 +11,7 @@ It also ships Claude Code project guidelines — a `CLAUDE.md`, a set of `.claud
 ## Stack
 
 - **CMS**: Craft CMS 5.9
-- **Environment**: DDEV — PHP 8.3, MySQL 8.0, nginx-fpm
+- **Environment**: DDEV — PHP 8.4, MySQL 8.0, nginx-fpm
 - **Front-end build**: Vite 8 + Tailwind CSS v4 (`@tailwindcss/vite`)
 - **JavaScript**: vanilla ES modules with a custom auto-discovered module system (`src/js/modules/`), GSAP for animation, Lenis for smooth scroll, and `@unseenco/taxi` for page transitions
 
