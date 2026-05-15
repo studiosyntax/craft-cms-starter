@@ -1,8 +1,13 @@
 <div class="">
 IMAGE
 
-{% set imageAsset = entry.image.eagerly().one() %}
-{% if imageAsset %}
-  {{ imageAsset.url }}
+{% set image = entry.image.eagerly().one() %}
+{% if image %}
+
+    {% set transformedImage = craft.imagerx.transformImage(image, {
+        width: 400, height: 330
+    }) %}
+    <img src="{{ transformedImage.url }}">
+
 {% endif %}
 </div>

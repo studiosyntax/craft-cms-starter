@@ -7,6 +7,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning follo
 ### What's new
 - Added the Imager X Cloudflare Images Transformer plugin (`spacecatninja/imager-x-cloudflare-images-transformer`), enabling Cloudflare Images as an Imager X transformer.
 - Added a Cloudflare R2 filesystem and a local `Transforms` filesystem, with the `images` volume now writing transforms to the latter. New `CLOUDFLARE_R2_*` env vars in `.env.example`.
+- Wired Imager X to the Cloudflare Images transformer via `config/imager-x.php` and `config/imager-x-cloudflare-images-transformer.php` (zone domain, default `format=auto`/`quality=80`, auto-gravity). Bumped the Imager X edition from `lite` to `pro` — required for third-party transformers.
 
 ### What's changed
 - Upgraded DDEV (`.ddev/config.yaml`) and the Composer platform pin (`composer.json` → `config.platform.php`) from PHP 8.3 to 8.4. The platform pin ensures `composer create-project` resolves the same dependencies whether it runs on the host or inside DDEV.
